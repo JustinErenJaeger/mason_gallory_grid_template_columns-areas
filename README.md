@@ -1,0 +1,1 @@
+# mason_gallory_grid_template_columns-areas
