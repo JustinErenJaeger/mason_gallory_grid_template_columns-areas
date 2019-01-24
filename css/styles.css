@@ -1,0 +1,74 @@
+.container {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    'header header header'
+    'sidebar-1 content sidebar-2'
+    'footer footer footer';
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.979)), url(../images/greyblocks.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.item1 {
+    grid-area: sidebar-1;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../images/wolf.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    grid-area: content;
+    background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(../images/laptopdesk.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item3 {
+    grid-area: sidebar-2;
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.979)), url(../images/watchdogs.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item4 {
+    grid-area: footer;
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.979)), url(../images/scatteredfragments.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 1000px){
+    .container {
+        grid-template-areas:
+        'header header header'
+        'content content content'
+        'sidebar-1 sidebar-1 sidebar-2'
+        'footer footer footer';
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .container {
+        grid-template-areas:
+        'header header header'
+        'content content content'
+        'sidebar-1 sidebar-1 sidebar-1'
+        'sidebar-2 sidebar-2 sidebar-2'
+        'footer footer footer';
+      
+}
+
